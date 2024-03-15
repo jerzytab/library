@@ -13,6 +13,7 @@ fn App() -> Html {
 
     html! {
         <div>
+        <h1 class="text-3xl font-bold underline">{"Tailwind work!"}</h1>
             <button {onclick}>{ "+1" }</button>
             <p>{ *counter }</p>
         </div>
