@@ -1,21 +1,16 @@
 use yew::prelude::*;
 
+use components::header::Header;
+use components::book::Book;
+use components::nav::Nav;
+mod components;
+
 #[function_component]
 fn App() -> Html {
-    let counter = use_state(|| 0);
-    let onclick = {
-        let counter = counter.clone();
-        move |_| {
-            let value = *counter + 1;
-            counter.set(value);
-        }
-    };
-
     html! {
-        <div>
-        <h1 class="text-3xl font-bold underline">{"Tailwind work!"}</h1>
-            <button {onclick}>{ "+1" }</button>
-            <p>{ *counter }</p>
+        <div style="background-color: #e8ecda;" class=" h-screen">
+            <Header />
+            <Nav />
         </div>
     }
 }
