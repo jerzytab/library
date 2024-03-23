@@ -1,0 +1,11 @@
+varsion: '3.8'
+
+services:
+  yew-ui:
+    volumes:
+      - type: bind
+        source: ../
+        target: /app
+    build:
+      context: ./docker/Dockerfile
+    command: bash -c "cd app && trunk serve"
